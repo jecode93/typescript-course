@@ -1,17 +1,45 @@
-let age: number = 28
-let firstname: string = 'Mario'
-let isFictional: boolean
+//------
+// Arrays
+//------
 
-age = 30 
-firstname = 'John'
-isFictional = true
+let names: string[] = ['John', 'Doe', 'Nene', 'Mario'];
+let ages: number[] = [25, 26, 27];
 
-let planet = 'Earth'
-let moons = 1
-let isLarge = false
+names.push('Mido')
+ages.push(28)
 
-planet = 'Saturn';
-moons = 145
-isLarge = true
+//------------------------------------
+// Type inference with Arrays
+//------------------------------------
 
-console.log("Hello there, I'm using TypeScript now")
+let fruits = ['Apple', 'Mangos', 'Bananas']
+let people = [10, 11, 12, 13]
+
+fruits.push('Peaches')
+people.push(14)
+
+//---------------
+// Object literals
+//---------------
+
+let user: { firstName: string, age: number, id: number } = {
+  id: 1,
+  firstName: 'Mario',
+  age: 25
+}
+
+user.firstName = 'John'
+user.age = 27
+user.id = 2
+
+//------------------------------------
+// Type inference with object literals
+//------------------------------------
+
+let person = {
+  name: 'Manno',
+  score: 25
+}
+
+person.name = 'Johnny'
+person.score = 26
