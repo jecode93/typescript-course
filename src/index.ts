@@ -1,37 +1,32 @@
 //----------
-// Any type
+// Tuples
 //----------
 
-let age: any
-let title
-
-age = 29
-age = 'John'
-age = false
-
-title = 25
-title = {
-  hello: 'World'
-}
-
-//----------
-// Any type in arrays
-//----------
-
-const things: any[] = ['John', 25, true, null]
-
-things.push({id: 123})
+let person: [string, number, boolean] = ['John', 20, true]
 
 //---------------
-// Function & any
+// Tuples exapmle
 //---------------
 
-function addTogether(value: any): any {
-  return value + value
+let hsla: [number, string, string, number]
+hsla = [200, '100%', '100%', 1]
+
+let xy: [number, number]
+xy = [20, 20]
+
+function useCoords(): [number, number] {
+  const lat = 100
+  const long = 50
+  
+  return [lat, long]
 }
 
-const resultOne = addTogether('Hello')
-const resultTwo = addTogether(7)
+const [lat, long] = useCoords()
 
-console.log(resultOne);
-console.log(resultTwo);
+//---------------
+// Named tuples
+//---------------
+
+let user: [name: string, age: number]
+
+user = ['John', 20]
