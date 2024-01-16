@@ -1,25 +1,28 @@
 "use strict";
 //----------
-// Functions
+// Any type
 //----------
-function addTwoNumbers(a, b) {
-    return a + b;
-}
-const substractTwoNmbers = (a, b) => {
-    return a - b;
+let age;
+let title;
+age = 29;
+age = 'John';
+age = false;
+title = 25;
+title = {
+    hello: 'World'
 };
-addTwoNumbers(5, 4);
-substractTwoNmbers(10, 20);
-function addAllNumbers(items) {
-    const total = items.reduce((a, c) => a + c, 0);
-    console.log(total);
+//----------
+// Any type in arrays
+//----------
+const things = ['John', 25, true, null];
+things.push({ id: 123 });
+//---------------
+// Function & any
+//---------------
+function addTogether(value) {
+    return value + value;
 }
-addAllNumbers([5, 6, 7, 8, 9]);
-//----------------------
-// Return type inference
-//----------------------
-function formatGreating(name, greating) {
-    return `${greating}, ${name}.`;
-}
-const result = formatGreating('John', 'Hello');
-console.log(result);
+const resultOne = addTogether('Hello');
+const resultTwo = addTogether(7);
+console.log(resultOne);
+console.log(resultTwo);
