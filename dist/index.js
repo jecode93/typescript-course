@@ -1,23 +1,40 @@
 "use strict";
 //----------
-// Tuples
+// Interfaces
 //----------
-let person = ['John', 20, true];
+const author1 = {
+    name: 'Mario',
+    avatar: '/images/mario.png'
+};
+;
+const authorPost = {
+    name: "John",
+    avatar: "/images/john.png",
+};
+const newPost = {
+    title: 'This is TypeScript',
+    body: 'This the body of the post',
+    tag: ['Tech', 'Drame'],
+    created_at: new Date(),
+    author: authorPost
+};
 //---------------
-// Tuples exapmle
+// As function argument types
 //---------------
-let hsla;
-hsla = [200, '100%', '100%', 1];
-let xy;
-xy = [20, 20];
-function useCoords() {
-    const lat = 100;
-    const long = 50;
-    return [lat, long];
+function createPost(post) {
+    console.log(`Created '${post.created_at}' post by "${post.author.name}".`);
 }
-const [lat, long] = useCoords();
+createPost(newPost);
 //---------------
-// Named tuples
+// With arrays
 //---------------
-let user;
-user = ['John', 20];
+const newPost2 = {
+    title: "Post 2",
+    body: "This the body of the post 2",
+    tag: ["Romance", "Drame"],
+    created_at: new Date(),
+    author: authorPost,
+};
+let posts = [];
+posts.push(newPost2);
+console.log(posts);
