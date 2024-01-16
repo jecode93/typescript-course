@@ -1,39 +1,20 @@
-//-------------
-// Type aliases
-//-------------
+//------------
+// Union types
+//------------
 
+let someId: number | string
 
-// example 1 - tuple
+someId = 1
+someId = 'Hello'
 
-type Rgb = [number, number, number]
+let email: string | null = null
 
-function getRamdomColor(): Rgb {
-  const r = Math.floor(Math.random() * 255)
-  const g = Math.floor(Math.random() * 255)
-  const b = Math.floor(Math.random() * 255);
-  
-  return [r, g, b]
-}
+email = 'jhon@doe.dev'
+email = null
 
-const colorOne = getRamdomColor()
-const colorTwo = getRamdomColor()
-console.log(colorOne, colorTwo);
+type Id = number | string
+let anotherId: Id
 
-// example 2 - object literals
+anotherId = 'Good'
+anotherId = 7
 
-interface User {
-  name: string
-  score: number
-}
-
-const userOne: User = {
-  name: 'John',
-  score: 10
-} 
-
-function formatUser(user: User): void {
-  console.log(`${user.name} has a score of ${user.score}`);
-}
-
-formatUser(userOne)
-formatUser({ name: 'Yahoo', score: 7})
