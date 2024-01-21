@@ -13,3 +13,5 @@ let isLarge = false
 planet = 'Saturn';
 moons = 145
 isLarge = true
+
+console.log("Hello there, I'm using TypeScript now")

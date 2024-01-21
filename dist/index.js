@@ -1,0 +1,14 @@
+"use strict";
+let age = 28;
+let firstname = 'Mario';
+let isFictional;
+age = 30;
+firstname = 'John';
+isFictional = true;
+let planet = 'Earth';
+let moons = 1;
+let isLarge = false;
+planet = 'Saturn';
+moons = 145;
+isLarge = true;
+console.log("Hello there, I'm using TypeScript now");
