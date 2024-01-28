@@ -1,32 +1,37 @@
 //----------
-// Functions
+// Any type
 //----------
 
-function addTwoNumbers(a: any, b: any): number {
-  return a + b;
+let age: any
+let title
+
+age = 29
+age = 'John'
+age = false
+
+title = 25
+title = {
+  hello: 'World'
 }
 
-const substractTwoNmbers = (a: number, b: number): number => {
-  return a - b;
+//----------
+// Any type in arrays
+//----------
+
+const things: any[] = ['John', 25, true, null]
+
+things.push({id: 123})
+
+//---------------
+// Function & any
+//---------------
+
+function addTogether(value: any): any {
+  return value + value
 }
 
-addTwoNumbers(5, 4)
-substractTwoNmbers(10, 20)
+const resultOne = addTogether('Hello')
+const resultTwo = addTogether(7)
 
-function addAllNumbers(items: number[]) {
-  const total = items.reduce((a, c) => a + c, 0)
-  console.log(total);
-}
-
-addAllNumbers([5, 6, 7, 8, 9])
-
-//----------------------
-// Return type inference
-//----------------------
-
-function formatGreating(name: string, greating: string) {
-  return `${greating}, ${name}.`;
-}
-
-const result = formatGreating('John', 'Hello');
-console.log(result);
+console.log(resultOne);
+console.log(resultTwo);
