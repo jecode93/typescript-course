@@ -1,28 +1,23 @@
 "use strict";
 //----------
-// Any type
+// Tuples
 //----------
-let age;
-let title;
-age = 29;
-age = 'John';
-age = false;
-title = 25;
-title = {
-    hello: 'World'
-};
-//----------
-// Any type in arrays
-//----------
-const things = ['John', 25, true, null];
-things.push({ id: 123 });
+let person = ['John', 20, true];
 //---------------
-// Function & any
+// Tuples exapmle
 //---------------
-function addTogether(value) {
-    return value + value;
+let hsla;
+hsla = [200, '100%', '100%', 1];
+let xy;
+xy = [20, 20];
+function useCoords() {
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
 }
-const resultOne = addTogether('Hello');
-const resultTwo = addTogether(7);
-console.log(resultOne);
-console.log(resultTwo);
+const [lat, long] = useCoords();
+//---------------
+// Named tuples
+//---------------
+let user;
+user = ['John', 20];
