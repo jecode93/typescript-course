@@ -1,13 +1,23 @@
 "use strict";
-//------------
-// Union types
-//------------
-let someId;
-someId = 1;
-someId = 'Hello';
-let email = null;
-email = 'jhon@doe.dev';
-email = null;
-let anotherId;
-anotherId = 'Good';
-anotherId = 7;
+//----------
+// Tuples
+//----------
+let person = ['John', 20, true];
+//---------------
+// Tuples exapmle
+//---------------
+let hsla;
+hsla = [200, '100%', '100%', 1];
+let xy;
+xy = [20, 20];
+function useCoords() {
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
+}
+const [lat, long] = useCoords();
+//---------------
+// Named tuples
+//---------------
+let user;
+user = ['John', 20];

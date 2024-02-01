@@ -1,20 +1,32 @@
-//------------
-// Union types
-//------------
+//----------
+// Tuples
+//----------
 
-let someId: number | string
+let person: [string, number, boolean] = ['John', 20, true]
 
-someId = 1
-someId = 'Hello'
+//---------------
+// Tuples exapmle
+//---------------
 
-let email: string | null = null
+let hsla: [number, string, string, number]
+hsla = [200, '100%', '100%', 1]
 
-email = 'jhon@doe.dev'
-email = null
+let xy: [number, number]
+xy = [20, 20]
 
-type Id = number | string
-let anotherId: Id
+function useCoords(): [number, number] {
+  const lat = 100
+  const long = 50
+  
+  return [lat, long]
+}
 
-anotherId = 'Good'
-anotherId = 7
+const [lat, long] = useCoords()
 
+//---------------
+// Named tuples
+//---------------
+
+let user: [name: string, age: number]
+
+user = ['John', 20]
